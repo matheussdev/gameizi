@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga Amadora</title>
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <link rel="shortcut icon" href="../assets/lalogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="appComponent">
+    </div>
+    <header>
+        <div class="logo-container">
+            <img src="../assets/lalogo.png" alt="logo liga amadora" class=" logoInicial">
+            <h1>Realize sua inscrição:</h1>
+            <h3>Ainda não tem equipe? <a href="/ligalol/informacoes">clique aqui!</a> </h3>
+        </div>
+    </header>
+    <main>
+            <form  action="cadastro" method="POST" name="formulario1">
+                <div class="fieldset">
+                    <div class="field">
+                        <label for="equipeName">Nome da Equipe</label>
+                        <span class="alertaName"></span>
+                        <input type="text" name="equipeName" placeholder="digite aqui" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email do Líder</label>
+                        <span class="alertaEmail"></span>
+                        <input type="email" name="email" placeholder="digite aqui" required>
+                    </div>
+                    <div class="field">
+                        <label for="telefone">WhatsApp do Líder</label>
+                        <span class="alertaNumero"></span>
+                        <input type="tel" name="telefone" placeholder="digite aqui" required>
+                    </div>
+                    <div class="participantes">
+                        <div class="newplayer">
+                            <div class="field">
+                                <label for="jogador">Adicionar Invocador</label>
+                                <p>adicione o nickname de cada integrante da sua equipe</p>
+                            </div>
+                            <span class="alertaPlayer"></span>
+                            <div class="inputparticipante">
+                                <input type="text" name="jogador" placeholder="digite o nome de invocador" maxlength="16">
+                                <button type="button" id="addplayer">
+                                    adicionar
+                                </button>
+                            </div>
+                        </div>
+                        <ol class="listaParticipantes">
+                        </ol>
+                    </div>
+                    <button type='button' class="cadastrar">
+                        Cadastrar Equipe
+                     </button>
+                    <label for="players"></label>
+                    <input type="hidden" name="players">
+                    <label for="pagamento"></label>
+                    <input type="hidden" name="pagamento" value="false">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">
+            Organização:
+            <a href="https://api.whatsapp.com/send?l=pt-BR&text=Ol%C3%A1%20queria%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20campeonado%20de%20league%20of%20legends%20que%20voc%C3%AA%20est%C3%A1%20organizando.&phone=559991878810">Marcos Lauremiro: (99) 9 9187-8810</a>
+            <a href="https://api.whatsapp.com/send?l=pt-BR&phone=5599991947191&text=Ol%C3%A1%20queria%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20campeonado%20de%20league%20of%20legends%20que%20voc%C3%AA%20est%C3%A1%20organizando.    ">Matheus Souza: (99) 9 9194-7191 </a>
+            Colaborador:
+            <a href="../"><img src="../assets/logofull.png" alt="logogameizi"></a>
+            © 2020 Liga Amadora, inc. Todos os direitos reservados.</div>
+    </footer>
+    <section class="loadscreen">
+        <div>
+            <img src="../assets/loading.gif" alt="loading">
+        </div>
+
+    </section>
+    
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

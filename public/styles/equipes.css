@@ -1,0 +1,58 @@
+main .container{
+    background-color: white;
+    width: 90%;
+    opacity: 0.7;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+*{
+    box-sizing: border-box;
+}
+header h2{
+    padding: 15px 30px;
+    text-align: center;
+}
+.container .titulos, .equipes
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.titulos div{
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.titulos .pagamento, .equipes .pagamento{
+    width: 20%;
+    min-width: 160px;
+    border-left:2px solid black ;
+    display: flex;
+    justify-content: center;
+}
+.equipes div{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 10px ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 2px solid black ;
+}
+h3{
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+}
+h3 a{
+    color: yellow;
+}
