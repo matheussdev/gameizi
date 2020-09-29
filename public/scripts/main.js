@@ -164,7 +164,7 @@ function verify(equipes){
 
 botaoEnviar.onclick = function requisicao(){
     var xhr = new XMLHttpRequest();
-    xhr['open']('GET','http://localhost:3000/ligalol/equipesapi');
+    xhr['open']('GET','https://gameizi.com.br/ligalol/equipesapi');
     xhr.send();
     xhr.onprogress = function (){
         loadScreen("flex")

@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const EquipeController = require('./controllers/EquipeController');
 const paymentMethod = require
 const server = express();
+const nodemailer = require("nodemailer");
 
 server.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele 
   if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP 
@@ -12,8 +13,10 @@ server.use((req, res, next) => { //Cria um middleware onde todas as requests pas
       next(); //Não precisa redirecionar, passa para os próximos middlewares que servirão com o conteúdo desejado 
 });
 
+
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
+const { text } = require('body-parser');
 
 // Configura credenciais
 mercadopago.configure({
@@ -55,6 +58,10 @@ server.use(bodyParser.urlencoded({extended:true}))
 
 
 //routes
+
+
+  
+
 server.get('/', (req,res) =>{
    return res.sendFile(__dirname + "/views/index.html")
 })
