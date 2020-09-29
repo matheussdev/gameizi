@@ -56,8 +56,6 @@ class EquipeController{
             
           }).then(info=>{
             res.send("info")
-          }).catch(error => {
-            res.send(error)
           })
         
         
